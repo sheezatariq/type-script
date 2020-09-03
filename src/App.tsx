@@ -8,7 +8,7 @@ const App: React.SFC = () => {
     <Router>
       <Switch>
         <Route exact path='/item' component={Item} /> 
-        <Route path='/login' component={Login} />
+        <Route path='/' component={Login} />
         <Redirect from='/login' exact to='/login'/>
       </Switch>
     </Router>
