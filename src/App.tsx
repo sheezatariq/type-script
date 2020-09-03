@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect, } from 'react-router-dom';
 import Login from './component/Login';
-import todoItem from './component/todoList/todoItem';
+import Item from './component/itemlist/item';
 
 const App: React.SFC = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path='/item' component={todoItem} /> 
+        <Route exact path='/item' component={Item} /> 
         <Route path='/login' component={Login} />
         <Redirect from='/login' exact to='/login'/>
       </Switch>
