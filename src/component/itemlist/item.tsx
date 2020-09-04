@@ -1,9 +1,9 @@
 import React from 'react';
-import RLDD from "react-list-drag-and-drop/lib/RLDD";
+import { useHistory } from 'react-router-dom';
 import './item.css';
 
-
 const Item = () => {
+  const history = useHistory()
 
   const [item, setItem] = React.useState<string>("");
   const [list, setList] = React.useState<string[]>([]);
@@ -17,20 +17,24 @@ const Item = () => {
     setItem('');
   };
 
+  const logout = () => {
+    history.push('/login')
+  };
+  
   return (
     <div className="field">
       <div className='input-field'>
         <input type="text"  value={item} onChange={handleChange} placeholder="Enter Text" />
-        <button onClick={addObject}>Add</button>
-      </div> 
-      <div className="lis">
-        {list && list.map((itm, index) => (
-          <div className="list-style">
+        <button disabled={item.length<=0} onClick={addObject}>Add</button>
+        <button onClick={logout}>LOGOUT</button>
+        <div className="lis">
+          {list && list.map((itm, index) => (
+            <div className="list-style">
               {itm}
-           
-          </div>
-         ))}
-      </div>
+            </div>
+          ))}
+        </div>
+      </div> 
     </div>
   );
 };
