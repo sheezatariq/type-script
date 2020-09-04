@@ -1,6 +1,6 @@
 import React from 'react';
+import RLDD from "react-list-drag-and-drop/lib/RLDD";
 import './item.css';
-
 
 
 const Item = () => {
@@ -18,16 +18,18 @@ const Item = () => {
   };
 
   return (
-    <div className="card">
-      <input type="text"
-        className="input-style" value={item} onChange={handleChange} placeholder="Enter Text" />
-      <button className="bnt" onClick={addObject}>Add</button>
+    <div className="field">
+      <div className='input-field'>
+        <input type="text"  value={item} onChange={handleChange} placeholder="Enter Text" />
+        <button onClick={addObject}>Add</button>
+      </div> 
       <div className="lis">
         {list && list.map((itm, index) => (
           <div className="list-style">
-            {itm}
+              {itm}
+           
           </div>
-        ))}
+         ))}
       </div>
     </div>
   );

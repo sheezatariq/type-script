@@ -1,28 +1,33 @@
 import React from "react";
 import RLDD from "react-list-drag-and-drop/lib/RLDD";
+import '../itemlist/item.css'
 
-
+const fruits = require("./fruits.json");
 
 interface Item {
   id: number;
   title: string;
-  
+  body: string;
+  icon: string;
 }
 
 interface State {
   items: Item[];
 }
 
+
 export default class VerticalExample extends React.PureComponent<{}, State> {
   constructor(props: {}) {
     super(props);
-    // this.state = { items: fruits.fruits };
+    this.state = { items: fruits.fruits };
   }
 
   render() {
     const items = this.state.items;
     return (
       <div className="example vertical">
+        <h2>Vertical Example: Draggable List of Fruits</h2>
+        <p>Drag and drop items to re-order the list.</p>
         <RLDD
           cssClasses="list-container"
           items={items}
@@ -35,9 +40,12 @@ export default class VerticalExample extends React.PureComponent<{}, State> {
 
   private itemRenderer = (item: Item, index: number): JSX.Element => {
     return (
+      
       <div className="item">
+        <div className="icon">{item.icon}</div>
         <div className="details">
           <p className="title">{item.title}</p>
+          <p className="body">{item.body}</p>
         </div>
         <div className="small">
           item.id: {item.id} - index: {index}
@@ -48,5 +56,5 @@ export default class VerticalExample extends React.PureComponent<{}, State> {
 
   private handleRLDDChange = (reorderedItems: Array<Item>) => {
     this.setState({ items: reorderedItems });
-};
+  };
 }

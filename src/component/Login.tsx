@@ -11,12 +11,11 @@ const Login = () => {
     if (response?.tokenId) {
       history.push('/item')
     }
-    console.log('response',response?.tokenId )
   };
   
   return(
     <div className= "center">
-      <div className= "card">
+      <div className= "card-login">
         <div>
           <h1>Login With Google</h1>
           <h3>Please click on button</h3>
