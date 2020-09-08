@@ -4,7 +4,9 @@ import './item.css';
 import RLDD from 'react-list-drag-and-drop/lib/RLDD';
 
 const Item = () => {
-  const history = useHistory()
+  
+  const history = useHistory();
+
   const [item, setItem] = useState<string>("");
   const [list, setList] = useState([] as any);
   

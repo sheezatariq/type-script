@@ -3,10 +3,10 @@
 }
 .field {
   width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .input-field input {
   width: 500px;
@@ -40,5 +40,4 @@
 }
 .text-left{
   margin-top: 4px;
-
 }
