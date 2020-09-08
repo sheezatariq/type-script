@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import './item.css';
 import RLDD from 'react-list-drag-and-drop/lib/RLDD';
 
 const Item = () => {

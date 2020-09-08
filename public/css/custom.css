@@ -64,4 +64,110 @@ body {
   margin-top: 2rem;
 }
 
+.row {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+.wrapper {
+	width: calc(100% - 100px);
+	height: calc(100% - 100px);
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.wrapper .head {
+	border: 1px solid #b1b5bb;
+	padding: 15px;
+}
+
+.wrapper .head .brandName {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding: 10px 0;
+	padding-left: 15px;
+}
+
+.wrapper .buttonHeader {
+  text-align: right;
+}
+
+.wrapper .button {
+  background: var(--btnColor);
+	border: 0px;
+	margin-top: 20px;
+	padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 10px;
+  outline: none;
+}
+
+.wrapper .buttonCancel {
+  background:  rgb(233, 44, 44);;
+	border: 0px;
+	width: 15%;
+	margin-top: 20px;
+	padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 10px;
+  outline: none;
+}
+
+.listing {
+  position: absolute;
+}
+
+.field {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-field input {
+  width: 500px;
+  height: 2.5rem;
+}
+
+.input-field button {
+  background-color: #dc4141;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: 75px;
+  height: 2.5rem;
+  margin: 0 1rem;
+}
+
+.list-style {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+  margin: 10px auto;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 30%;
+  max-width: 300px;
+}
+
+.lis {
+  margin-top: 40px;
+  width: 50%;
+  align-items: center;
+  float: left;
+}
+
+.text-left{
+  margin-top: 4px;
+}
+
 
