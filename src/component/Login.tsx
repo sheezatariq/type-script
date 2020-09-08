@@ -1,7 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import GoogleLogin from 'react-google-login';
-import './Login.css';
 import { GOOGLE_API_KEY } from '../constant';
 
 const Login = () => {
@@ -14,9 +13,10 @@ const Login = () => {
   };
   
   return(
-    <div className= "center">
-      <div className= "card-login">
+    <div className="center">
+      <div className="card">
         <div>
+          <img src="/assests/google.png" alt="" className="logoLogin" />
           <h1>Login With Google</h1>
           <h3>Please click on button</h3>
         </div>
@@ -26,6 +26,7 @@ const Login = () => {
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
           cookiePolicy={'single_host_origin'}
+          className="googleButton"
         />
       </div>
     </div>

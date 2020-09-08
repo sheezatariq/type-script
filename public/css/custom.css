@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+:root {
+  --linkColor: #7f7f7f;
+  --leftBtnColor: #b9b4b4;
+  --forgotColor: #a08c8c;
+  --fontSize: 16px;
+  --darkColor: #3f444d;
+  --btnColor: rgb(28, 144, 211);
+  --skyColor: rgb(193, 196, 199);
+  --blackColor: #000000;
+  --inputColor: #B1B5BB;
+  --inputColorDropDown: rgb(150, 151, 153);
+  --labelColor: rgb(131, 133, 136);
+}
+.center{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+	max-width: 500px;
+}
+
+.card{
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 0.8rem;
+  text-align: center;
+  width: 100%;
+  border: 2px solid var(--darkColor);
+}
+
+.card .logoLogin{
+  width: 100%;
+  max-width: 150px;
+}
+
+.logo {
+  background: var(--btnColor);
+	padding: 5px;
+  color: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 10px;
+  outline: none;
+}
+
+.googleButton {
+  text-align: center;
+  padding: 1.3rem !important;
+  background-color: #dc4141 !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  border-radius: 0.7rem !important;
+  margin-top: 2rem;
+}
+
+
