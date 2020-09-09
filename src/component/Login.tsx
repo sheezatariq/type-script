@@ -10,16 +10,10 @@ const Login: FC<any> = () => {
   const history = useHistory();
 
   const responseGoogle = (response: any) => {
-    console.log("responsiveness",response?.tokenId)
     if (response?.tokenId) {
-      // sessionStorage.setItem('user-data',JSON.stringify(response.accessToken));
-      // sessionStorage.setItem('token', response?.tokenId);
       toast.success('Successfully Logged In');
       history.push('/item')
     }
-    // if(error) {
-    //   toast.error('Something went wrong');
-    // }
   };
   
   return(
