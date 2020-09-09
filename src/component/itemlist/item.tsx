@@ -28,10 +28,12 @@ const Item = () => {
 
   return (
     <div className="field">
-      <div className="input-field">
-        <input type="text" value={item} onChange={handleChange} placeholder="Enter Text" />
-        <button disabled={item.length<=0} onClick={addObject}>Add</button>
-        <button onClick={logout}>LOGOUT</button>
+      <div >
+        <div className="input-field">
+          <input type="text" value={item} onChange={handleChange} placeholder="Enter Text" />
+          <button disabled={item.length<=0} onClick={addObject}>Add</button>
+          <button onClick={logout}>LOGOUT</button>
+        </div>
         <div className="lis">
           <RLDD
             items={list}

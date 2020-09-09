@@ -130,13 +130,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute; 
 }
-
+.input-field{
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;align-items: center;
+}
 .input-field input {
   width: 500px;
-  margin-top: 60px;
-  /* position: absolute; */
   height: 2.5rem;
 }
 
@@ -159,11 +163,13 @@ body {
   text-align: center;
   align-items: center;
   position: relative;
-  width: 50%;
+  width: 90vw;
+  max-width: 450px;
+  margin-right: 200px;
 }
 
 .lis {
-  margin-top: 40px;
+  margin-top: 7rem;
   width: 50%;
   align-items: center;
   float: left;
@@ -171,10 +177,6 @@ body {
 
 .text-left{
   margin-top: 4px;
-}
-
-.fixed {
-  position: fixed;
 }
 
 
