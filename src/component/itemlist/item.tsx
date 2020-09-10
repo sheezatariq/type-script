@@ -37,7 +37,6 @@ const Item = () => {
       <div>
         <div className="input-field">
           <input type="text" value={item} onChange={handleChange} placeholder="Enter Text" />
-         
           <button disabled={item.length<=0} onClick={addObject}>Add</button>
           <button onClick={logout}>LOGOUT</button>
         </div>
@@ -48,8 +47,8 @@ const Item = () => {
               return (
                 <div className="list-style" onClick={()=>handleRldDelete(index)}
                 >
-                  <img src="assests/delete.png"/>
                   {item?.item}
+                  <img src="assests/delete.png" alt="" style={{ float: "right"}}/> 
                 </div>
               );
             }}
