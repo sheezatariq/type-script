@@ -24,22 +24,31 @@ const Item = () => {
 
   const handleRldChange = (newItems : any) => {
     setList(newItems);
-  }
+  }; 
+
+  const handleRldDelete = (indx: number) => {
+    let filtered = [...list]
+    filtered = filtered.filter((vl,index)=>index!==indx)
+    setList(filtered);
+  };
 
   return (
     <div className="field">
-      <div >
+      <div>
         <div className="input-field">
           <input type="text" value={item} onChange={handleChange} placeholder="Enter Text" />
+         
           <button disabled={item.length<=0} onClick={addObject}>Add</button>
           <button onClick={logout}>LOGOUT</button>
         </div>
         <div className="lis">
           <RLDD
             items={list}
-            itemRenderer={(item: any) => {
+            itemRenderer={(item: any,index:number) => {
               return (
-                <div className="list-style">
+                <div className="list-style" onClick={()=>handleRldDelete(index)}
+                >
+                  <img src="assests/delete.png"/>
                   {item?.item}
                 </div>
               );

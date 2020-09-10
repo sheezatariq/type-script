@@ -31,7 +31,6 @@ const Login: FC<any> = () => {
           onFailure={responseGoogle}
           cookiePolicy={'single_host_origin'}
           className="googleButton"
-        
         />
       </div>
     </div>
